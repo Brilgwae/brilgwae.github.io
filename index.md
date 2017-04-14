@@ -11,4 +11,12 @@ Dans le principe ca repond a mes attentes, mais je n'ai jamais utilise un raspbe
 ## Installation du Raspberry
 
 ### Raspbian
-Plutot simple. on flashe [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) (Full, pas Lite).
+Plutot simple. on flashe [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) (avec PIXEL, pas Lite). Sur mac, j'utilise [Etcher](https://etcher.io/). Simple et efficace.
+
+Il faut creer un fichier vide nommé ssh a la racine. Cela permet d'activer l'acces via SSH pour la suite. Sur mac dans un terminal on tape
+...
+cd /Volumes/boot
+touch ssh
+...
+
+
