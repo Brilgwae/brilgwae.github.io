@@ -20,10 +20,20 @@ Sur mac dans un terminal on tape
 cd /Volumes/boot
 touch ssh
 ```
-donc maintenant on peut se connecter en SSH. Toujours sur mac on peut alors taper dans un terminal sachant que le mot de passe est raspberry
+donc maintenant on peut se connecter en SSH. Toujours sur mac on peut alors taper dans un terminal
 ```
 ssh pi@IP_ADDRESS
 ```
+sachant que le mot de passe est raspberry
+
 bon je laisse de cote la securite, hein !!! c'est mal je sais mais je suis en train de jouer. on verra plus tard. si vous voulez essayer utilisez la commande passwd pour changer le mot de passe par defaut.
 
-
+pour installer jeedom, on a plus qu'a faire
+```
+sudo apt-get update
+sudo apt-get upgrade
+wget https://raw.githubusercontent.com/jeedom/core/stable/install/install.sh
+chmod +x install.sh
+./install.sh
+```
+et hop
