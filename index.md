@@ -36,4 +36,4 @@ wget https://raw.githubusercontent.com/jeedom/core/stable/install/install.sh
 chmod +x install.sh
 ./install.sh
 ```
-et hop
+et hop, ca prend une plombe mais a la fin, vous devriez pouvoir lancer un navigateur sur l'adresse IP de votre raspberry.
