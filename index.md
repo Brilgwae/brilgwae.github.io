@@ -1,8 +1,9 @@
-# Jeedom, Jarvis et moi
+# Jeedom, Jarvis, Alexa, Sarah et moi
 
 Il y a quelques mois un collegue a gagné plusieurs amazon echo dot. Tres gentiment il m'en a donné un. 
-N'etant pas convaincu par le cote "Amazon ecoute mes conversations". je me suis mis dans la tete de m'en faire
-un equivalent qui soit plus privé.
+Dans un premier temps, n'etant pas convaincu par le cote "Amazon ecoute mes conversations". je me suis mis dans la tete de m'en faire un equivalent qui soit plus privé.
+
+L'objectif est de mettre en place un systeme domotique controlé a la voix. Du coup, le systeme est divise en 2 parties: le serveur domotique d'une part et le moteur de reconnaissance vocale.
 
 Apres avoir essayé divers truc je suis arrive sur une combinaison [Jeedom](www.jeedom.com) + [Jarvis](http://domotiquefacile.fr/jarvis/) sur un Raspberry Pi 3.
 
