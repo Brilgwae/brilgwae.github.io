@@ -1,3 +1,4 @@
+# Mon Setup Domotique
 ### Raspbian
 Plutot simple. on flashe [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) (avec PIXEL, pas Lite). Sur mac, j'utilise [Etcher](https://etcher.io/). Simple et efficace.
 
@@ -16,6 +17,14 @@ sachant que le mot de passe est raspberry
 
 bon je laisse de cote la securite, hein !!! c'est mal je sais mais je suis en train de jouer. on verra plus tard. si vous voulez essayer utilisez la commande passwd pour changer le mot de passe par defaut.
 
+c'est bien aussi de desactiver l'autoswitch hdmi en ajoutant a /boot/config.txt
+```
+# deactivate HDMI autoswitch
+hdmi_ignore_cec_init=1
+```
+
+
+### Jeedom
 pour installer jeedom, on a plus qu'a faire
 ```
 sudo apt-get update
@@ -27,11 +36,12 @@ sudo reboot
 ```
 et hop, ca prend une plombe mais a la fin, vous devriez pouvoir lancer un navigateur sur l'adresse IP de votre raspberry.
 
-c'est bien aussi de desactiver l'autoswitch hdmi en ajoutant a /boot/config.txt
+ensuite faut regler un petit probleme
 ```
-# deactivate HDMI autoswitch
-hdmi_ignore_cec_init=1
+sudo chown -R www-data:www-data /tmp/jee*
+chmod -R 777 /tmp/jeedom
 ```
+
 
 ### HA-Bridge
 Used to control the lights using Alexa. get it from here https://github.com/bwssytems/ha-bridge
