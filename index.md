@@ -23,11 +23,45 @@ sudo apt-get upgrade
 sudo wget https://raw.githubusercontent.com/jeedom/core/stable/install/install.sh
 sudo chmod +x install.sh
 sudo ./install.sh
+sudo reboot
 ```
 et hop, ca prend une plombe mais a la fin, vous devriez pouvoir lancer un navigateur sur l'adresse IP de votre raspberry.
 
+c'est bien aussi de desactiver l'autoswitch hdmi en ajoutant a /boot/config.txt
+```
+# deactivate HDMI autoswitch
+hdmi_ignore_cec_init=1
+```
+
 ### HA-Bridge
 Used to control the lights using Alexa
+```
+cd
+mkdir habridge
+cd habridge
+wget https://github.com/bwssytems/ha-bridge/releases/download/v4.5.6/ha-bridge-4.5.6.jar
+```
+then we need to start the service at boot
+```
+cd /etc/systemd/system
+sudo nano habridge.service
+```
+then copy the below into nano
+```
+[Unit]
+Description=HA Bridge
+Wants=network.target
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/habridge
+ExecStart=/usr/bin/java -jar -Dconfig.file=/home/pi/habridge/data/habridge.config -Dserver.port=8080 /home/pi/habridge/ha-bridge-4.5.6.jar
+
+[Install]
+WantedBy=multi-user.target
+```
+
 
 ### Control HDMI
 ```
