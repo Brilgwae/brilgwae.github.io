@@ -34,7 +34,7 @@ hdmi_ignore_cec_init=1
 ```
 
 ### HA-Bridge
-Used to control the lights using Alexa
+Used to control the lights using Alexa. get it from here https://github.com/bwssytems/ha-bridge
 ```
 cd
 mkdir habridge
@@ -80,7 +80,24 @@ tail -f /var/log/syslog
 ```
 
 
-### Control HDMI
+### Controle HDMI
+main info from here http://blog.endpoint.com/2012/11/using-cec-client-to-control-hdmi-devices.html
+interesting info here https://blog.gordonturner.com/2016/12/14/using-cec-client-on-a-raspberry-pi/
+
+Start installation with
+```
+sudo apt-get install cec-utils
+```
+
+then it may useful to store scripts
+```
+cd
+mkdir scripts
+touch hdmi-tv.sh
+chmod +x ./hdmi-tv.sh
+nano hdmi-tv.sh
+```
+copy the following
 ```
 #!/bin/bash
 # hdmi-tv.sh : control a tv through hdmi-cec
