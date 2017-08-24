@@ -83,6 +83,7 @@ tail -f /var/log/syslog
 ### Controle HDMI
 main info from here http://blog.endpoint.com/2012/11/using-cec-client-to-control-hdmi-devices.html
 interesting info here https://blog.gordonturner.com/2016/12/14/using-cec-client-on-a-raspberry-pi/
+frame builder http://www.cec-o-matic.com
 
 Start installation with
 ```
@@ -93,6 +94,7 @@ then it may useful to store scripts
 ```
 cd
 mkdir scripts
+cd scripts
 touch hdmi-tv.sh
 chmod +x ./hdmi-tv.sh
 nano hdmi-tv.sh
@@ -152,8 +154,23 @@ fi
 
 echo
 ```
+then just run 
+```
+./hdmi-tv.sh
+```
 
-### Yamaha control
+### Yamaha Network control
+create a new scripts
+```
+cd
+cd scripts
+touch yamaha.sh
+chmod +x ./yamaha.sh
+nano ./yamaha.sh
+```
+
+and copy
+
 ```
 #!/bin/bash
 # yamaha.sh : control a yamaha amplifier
