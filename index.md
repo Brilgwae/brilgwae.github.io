@@ -62,6 +62,23 @@ ExecStart=/usr/bin/java -jar -Dconfig.file=/home/pi/habridge/data/habridge.confi
 WantedBy=multi-user.target
 ```
 
+Reload the system control config:
+```
+sudo systemctl daemon-reload
+```
+To start the bridge:
+```
+sudo systemctl start habridge.service
+```
+To start the service at boot, use the enable command:
+```
+sudo systemctl enable habridge.service
+```
+To look at the log, the output goes into the system log at `/var/log/syslog':
+```
+tail -f /var/log/syslog
+```
+
 
 ### Control HDMI
 ```
