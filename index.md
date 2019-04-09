@@ -1,6 +1,6 @@
 # Mon Setup Domotique
 ### Raspbian
-Plutot simple. on flashe [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) (avec PIXEL, pas Lite). Sur mac, j'utilise [Etcher](https://etcher.io/). Simple et efficace.
+Plutot simple. on flashe [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/) (complet). Sur mac, j'utilise [Etcher](https://etcher.io/). Simple et efficace.
 
 Il faut creer un fichier vide nommé ssh a la racine. Cela permet d'activer l'acces via SSH pour la suite. 
 
