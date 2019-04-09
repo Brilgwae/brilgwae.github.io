@@ -36,6 +36,12 @@ sudo reboot
 ```
 et hop, ca prend une plombe mais a la fin, vous devriez pouvoir lancer un navigateur sur l'adresse IP de votre raspberry.
 
+pour se loguer 
+```
+user:admin
+password:admin
+```
+
 ensuite faut regler un petit probleme
 ```
 sudo chown -R www-data:www-data /tmp/jee*
